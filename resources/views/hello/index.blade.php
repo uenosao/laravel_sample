@@ -9,11 +9,17 @@
 </head>
 <body>
     <h1>Blade/Index</h1>
-    <p>&#064;foreachディレクティブの例</p>
+    <p>&#064;whileディレクティブの例</p>
     <ol>
-    @foreach($data as $item)
-    <li>{{$item}}
-    @endforeach
+    @php
+    $counter = 0;
+    @endphp
+    @while($counter < count($data))
+    <li>{{$data[$counter]}}</li>
+    @php
+    $counter++;
+    @endphp
+    @endwhile
     </ol>
 </body>
 </html>
