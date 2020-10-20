@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route::get('hello', [HelloController::class, 'index']);
-Route::get('hello','HelloController@index');
+Route::get('hello','App\Http\Controllers\HelloController@index');
+Route::post('hello','App\Http\Controllers\HelloController@post');
 
     // Route::get('hello',function () use ($html) {
     //     return $html;
